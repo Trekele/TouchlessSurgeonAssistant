@@ -1,12 +1,14 @@
-﻿<Window x:Class="TouchlessSurgeonAssistant.winOperstionSummary"
+﻿<Controls:MetroWindow x:Class="TouchlessSurgeonAssistant.winOperstionSummary"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
         Title="winOperstionSummary" Height="300" Width="300">
     <Grid>
-        
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="86,123,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
-</Window>
+</Controls:MetroWindow>

@@ -17,7 +17,7 @@ namespace TouchlessSurgeonAssistant
     /// <summary>
     /// Interaction logic for winLogin.xaml
     /// </summary>
-    public partial class winLogin : Window
+    public partial class winLogin 
     {
         public winLogin()
         {

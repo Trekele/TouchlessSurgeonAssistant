@@ -17,7 +17,7 @@ namespace TouchlessSurgeonAssistant
     /// <summary>
     /// Interaction logic for winChecklist.xaml
     /// </summary>
-    public partial class winChecklist : Window
+    public partial class winChecklist
     {
         public winChecklist()
         {

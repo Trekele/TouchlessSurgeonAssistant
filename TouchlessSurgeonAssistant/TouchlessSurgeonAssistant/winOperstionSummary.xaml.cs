@@ -17,7 +17,7 @@ namespace TouchlessSurgeonAssistant
     /// <summary>
     /// Interaction logic for winOperstionSummary.xaml
     /// </summary>
-    public partial class winOperstionSummary : Window
+    public partial class winOperstionSummary
     {
         public winOperstionSummary()
         {

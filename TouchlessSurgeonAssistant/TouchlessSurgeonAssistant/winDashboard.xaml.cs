@@ -17,7 +17,7 @@ namespace TouchlessSurgeonAssistant
     /// <summary>
     /// Interaction logic for winDashboard.xaml
     /// </summary>
-    public partial class winDashboard : Window
+    public partial class winDashboard
     {
         public winDashboard()
         {

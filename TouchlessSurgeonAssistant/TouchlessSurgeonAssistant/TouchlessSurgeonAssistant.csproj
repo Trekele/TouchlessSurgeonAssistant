@@ -35,6 +35,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HelixToolkit, Version=2015.1.700.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.2015.1.700\lib\portable-net4+sl4+wp71+win8\HelixToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HelixToolkit.Wpf, Version=2015.1.700.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.Wpf.2015.1.700\lib\net45\HelixToolkit.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="LeapCSharp.NET4.0">
       <HintPath>..\..\..\..\..\..\..\Program Files\LeapSDK\lib\LeapCSharp.NET4.0.dll</HintPath>
     </Reference>
@@ -66,9 +74,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ctrl3DModelViewer.xaml.cs">
+      <DependentUpon>ctrl3DModelViewer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ctrlPatientInfo.xaml.cs">
       <DependentUpon>ctrlPatientInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomGesture.cs" />
+    <Compile Include="LeapGestureListener.cs" />
+    <Compile Include="SwipeDirection.cs" />
     <Compile Include="winChecklist.xaml.cs">
       <DependentUpon>winChecklist.xaml</DependentUpon>
     </Compile>
@@ -84,6 +98,10 @@
     <Compile Include="winOperstionSummary.xaml.cs">
       <DependentUpon>winOperstionSummary.xaml</DependentUpon>
     </Compile>
+    <Page Include="ctrl3DModelViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ctrlPatientInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

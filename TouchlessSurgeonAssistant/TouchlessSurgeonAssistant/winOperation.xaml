@@ -6,8 +6,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
-        Title="winOperation" Height="300" Width="300">
+        Title="winOperation" Height="492.584" Width="545.975">
     <Grid>
-        
+       <local:ctrlPatientInfo HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="537" Margin="0,0,-245,0"/>
+       <local:ctrl3DModelViewer HorizontalAlignment="Left" Height="247" Margin="0,105,0,0" VerticalAlignment="Top" Width="220"/>
+
     </Grid>
 </Controls:MetroWindow>

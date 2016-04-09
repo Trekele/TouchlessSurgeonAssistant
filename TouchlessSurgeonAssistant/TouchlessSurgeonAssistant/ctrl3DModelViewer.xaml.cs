@@ -25,7 +25,7 @@ namespace TouchlessSurgeonAssistant
     /// </summary>
     public partial class ctrl3DModelViewer : UserControl
     {
-        private const string MODEL_PATH = @"C:\Users\Trekele\Downloads\ca5rmhx7l4-Human Heart 2\Human Heart 2\Heart.obj";
+        private const string MODEL_PATH = @"C:\Users\Kait\Downloads\heart\Heart.obj";
         Model3D device = null;
         private Controller controller;
         private LeapGestureListener listener;
@@ -56,7 +56,7 @@ namespace TouchlessSurgeonAssistant
                 ModelImporter import = new ModelImporter();
 
                 //Load the 3D model file
-                device = import.Load(model);
+                 device = import.Load(model);
             }
             catch (Exception e)
             {

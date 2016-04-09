@@ -6,8 +6,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
-        Title="Login" Height="720" Width="1080">
+        Title="Login" Height="720" Width="1080"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        BorderThickness="1"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+
+                      >
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="382,186,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="382,186,0,0" VerticalAlignment="Top" Width="89"/>
     </Grid>
 </Controls:MetroWindow>

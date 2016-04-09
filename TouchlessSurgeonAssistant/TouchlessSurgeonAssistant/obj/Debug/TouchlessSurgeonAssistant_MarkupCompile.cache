@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\App.xaml
-2978463135
+6-1080864637
 
-61306242863
+10-1853822307
 161390568612
-MainWindow.xaml;winLogin.xaml;
+MainWindow.xaml;winChecklist.xaml;winDashboard.xaml;winLogin.xaml;winOperation.xaml;winOperstionSummary.xaml;
 
 False
 

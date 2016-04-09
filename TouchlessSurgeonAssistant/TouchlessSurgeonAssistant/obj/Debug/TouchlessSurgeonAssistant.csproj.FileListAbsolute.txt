@@ -51,3 +51,11 @@ C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssi
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.g.resources
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.Properties.Resources.resources
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.csproj.GenerateResource.Cache
+C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\winChecklist.g.cs
+C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\winDashboard.g.cs
+C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\winOperation.g.cs
+C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\winOperstionSummary.g.cs
+C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\winChecklist.baml
+C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\winDashboard.baml
+C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\winOperation.baml
+C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\winOperstionSummary.baml

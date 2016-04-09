@@ -66,28 +66,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ctrlPatientTimer.xaml.cs">
-      <DependentUpon>ctrlPatientTimer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="winChecklist.xaml.cs">
-      <DependentUpon>winChecklist.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="winDashboard.xaml.cs">
-      <DependentUpon>winDashboard.xaml</DependentUpon>
-    </Compile>
     <Compile Include="winLogin.xaml.cs">
       <DependentUpon>winLogin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="winOperation.xaml.cs">
-      <DependentUpon>winOperation.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="winOperstionSummary.xaml.cs">
-      <DependentUpon>winOperstionSummary.xaml</DependentUpon>
-    </Compile>
-    <Page Include="ctrlPatientTimer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,23 +81,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="winChecklist.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="winDashboard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="winLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="winOperation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="winOperstionSummary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

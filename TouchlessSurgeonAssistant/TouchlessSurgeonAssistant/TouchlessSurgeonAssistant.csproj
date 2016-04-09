@@ -66,6 +66,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ctrlPatientInfo.xaml.cs">
+      <DependentUpon>ctrlPatientInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="winChecklist.xaml.cs">
       <DependentUpon>winChecklist.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,10 @@
     <Compile Include="winOperstionSummary.xaml.cs">
       <DependentUpon>winOperstionSummary.xaml</DependentUpon>
     </Compile>
+    <Page Include="ctrlPatientInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

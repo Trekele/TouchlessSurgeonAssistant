@@ -30,7 +30,6 @@ namespace TouchlessSurgeonAssistant
             int topMargin = 20;
             int count = 0;
             patient = Patient;
-            var stackPanel = new StackPanel { Orientation = Orientation.Vertical };
 
             foreach (string checklistItem in patient.procedure.CheckList)
             {
@@ -50,17 +49,25 @@ namespace TouchlessSurgeonAssistant
 
                 stackPanel.Children.Add(temp);
                 checkBoxes.Add(temp);
-                
+
                 topMargin += count == 2 ? 40 : 5;
                 count++;
             }
 
-            this.Content = stackPanel;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             bool allChecked;
+            foreach (CheckBox item in checkBoxes)
+            {
+                if (item.IsChecked == false)
+                {
+                    MessageBox.Show("Select all boxes");
+                    return;
+                }
+
+            }
             checklistApproved = true;
             this.Close();
         }

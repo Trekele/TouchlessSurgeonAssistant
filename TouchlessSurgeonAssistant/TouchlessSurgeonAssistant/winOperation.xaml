@@ -21,24 +21,18 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <helix:HelixViewport3D x:Name="viewPort3d" ZoomExtentsWhenLoaded="true" Margin="0,118,681,215">
-            <!-- Remember to add light to the scene -->
-            <helix:DefaultLights/>
-            <ModelVisual3D x:Name="p"/>
-        </helix:HelixViewport3D>
         <local:ctrlPatientInfo x:Name="ctrlPatient" HorizontalAlignment="Left" Margin="10,10,0,494" Width="1167"/>
         
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <helix:HelixViewport3D x:Name="viewPort3d1" ZoomExtentsWhenLoaded="true" Margin="0,118,681,215">
+            <helix:HelixViewport3D x:Name="viewPort3d" ZoomExtentsWhenLoaded="true" Margin="0,118,626,10">
                 <!-- Remember to add light to the scene -->
                 <helix:DefaultLights/>
                 <ModelVisual3D x:Name="p1"/>
             </helix:HelixViewport3D>
             <Controls:NumericUpDown Minimum = "0" Maximum = "10000" HorizontalAlignment="Left" VerticalAlignment="Top" Interval = "1" Width="100" Height="30"  HasDecimals="False" Margin="974,289,111,286"/>
-            <local:ctrlPatientInfo x:Name="ctrlPatient1" HorizontalAlignment="Left" Margin="10,10,0,494" Width="1167"/>
             <metro:NumericUpDown Minimum = "0" Maximum = "10000" HorizontalAlignment="Left" VerticalAlignment="Top" Interval = "1" Width="100" Height="30"  HasDecimals="False" Margin="972,343,113,232"/>
             <Label x:Name="label" Content="Gauze" HorizontalAlignment="Left" Margin="868,294,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy" Content="Towels" HorizontalAlignment="Left" Margin="868,346,0,0" VerticalAlignment="Top"/>

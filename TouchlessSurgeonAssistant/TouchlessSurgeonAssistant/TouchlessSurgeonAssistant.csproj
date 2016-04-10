@@ -115,6 +115,7 @@
     <Compile Include="winOperstionSummary.xaml.cs">
       <DependentUpon>winOperstionSummary.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Zoom.cs" />
     <Page Include="ctrlPatientInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

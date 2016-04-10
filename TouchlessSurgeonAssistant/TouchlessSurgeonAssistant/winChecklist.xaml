@@ -23,8 +23,8 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <Button x:Name="button" Content="Submit" HorizontalAlignment="Left" Margin="295,235,0,0" VerticalAlignment="Top" Width="83" Click="button_Click"/>
-        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="383,235,0,0" VerticalAlignment="Top" Width="89" Click="button1_Click"/>
-
+        <StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Height="371" VerticalAlignment="Top" Width="1014"/>
+        <Button x:Name="button" Content="Submit" Margin="0,376,599,59" Width="163" HorizontalAlignment="Right" Height="Auto" Click="button_Click"/>
+        <Button x:Name="button_Copy" Content="Cancel" Margin="0,376,274,59" Width="163" HorizontalAlignment="Right" Height="Auto" Click="button1_Click"/>
     </Grid>
 </Controls:MetroWindow>

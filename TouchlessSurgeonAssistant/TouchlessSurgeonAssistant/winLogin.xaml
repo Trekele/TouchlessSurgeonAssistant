@@ -23,22 +23,32 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource MaterialDesignPasswordBox}">
+                <Setter Property="Margin" Value="0 8 0 8" />
+            </Style>
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.498,0.56">
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="0*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="textBox"  Height="23" TextWrapping="Wrap" Width="300" Margin="48,1,-48,16"/>
-        <TextBox x:Name="textBox_Copy"  Height="23" TextWrapping="Wrap" Width="300" Margin="48,34,-48,-41" Grid.Row="1"/>
-        <Button x:Name="button" Content="Submit"  Margin="70,92,148,-108" Grid.Row="1" Click="button_Click"/>
-        <Label x:Name="label" Content="User Id: "  Margin="-38,1,234,3" />
-        <Label x:Name="label_Copy" Content="Password:"  Margin="-38,40,234,-51" Grid.Row="1" />
+        <PasswordBox Grid.Row="2" 		
+                     x:Name="PasswordBox" Margin="70,26,-52,-10"
+                      />
+        <materialDesign:PackIcon Width="25" Margin="-63,6,0,0" Kind="AccountBox" RenderTransformOrigin="0.52,0.542" VerticalAlignment="Top" Height="25" />
+        <TextBox x:Name="textBox"  Height="23" TextWrapping="Wrap" Margin="70,0,-52,17"/>
+        <materialDesign:PackIcon Width="25" Height="25" Margin="-63,27,0,-39" Kind="Lock" RenderTransformOrigin="0.52,0.542" Grid.Row="2" />
+        <Button x:Name="button" Content="Submit"  Margin="70,80,148,-108" Grid.Row="2" Click="button_Click"/>
+        <Label x:Name="label" Content="User Id: "  Margin="-14,6,210,2" Grid.RowSpan="3" />
+        <Label x:Name="label_Copy" Content="Password:"  Margin="-14,27,210,-50" Grid.Row="2" HorizontalAlignment="Right" Width="104" />
         <Label x:Name="label_Copy1" Content="Salvera"  Margin="70,-70,126,74" FontSize="22" />
-        
+
+
 
     </Grid>
 </Controls:MetroWindow>

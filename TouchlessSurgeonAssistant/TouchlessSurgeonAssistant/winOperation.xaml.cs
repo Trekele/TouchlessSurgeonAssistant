@@ -22,7 +22,7 @@ namespace TouchlessSurgeonAssistant
     /// <summary>
     /// Interaction logic for TestWindow.xaml
     /// </summary>
-    public partial class winOperation : Window
+    public partial class winOperation
     {
 
         private const string MODEL_PATH = @"C:\Users\Trekele\Downloads\ca5rmhx7l4-Human Heart 2\Human Heart 2\Heart.obj";
@@ -74,7 +74,7 @@ namespace TouchlessSurgeonAssistant
                 ModelImporter import = new ModelImporter();
 
                 //Load the 3D model file
-                device = import.Load(model);
+               // device = import.Load(model);
             }
             catch (Exception e)
             {

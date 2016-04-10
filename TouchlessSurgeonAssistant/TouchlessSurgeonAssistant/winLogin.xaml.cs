@@ -19,9 +19,11 @@ namespace TouchlessSurgeonAssistant
     /// </summary>
     public partial class winLogin 
     {
+        private const string BACKGROUND_PATH = @"bkgrnd.png";
         public winLogin()
         {
             InitializeComponent();
+           
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

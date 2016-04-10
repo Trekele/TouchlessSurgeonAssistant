@@ -32,12 +32,12 @@
                 <helix:DefaultLights/>
                 <ModelVisual3D x:Name="p1"/>
             </helix:HelixViewport3D>
-            <Controls:NumericUpDown Minimum = "0" Maximum = "10000" HorizontalAlignment="Left" VerticalAlignment="Top" Interval = "1" Width="100" Height="30"  HasDecimals="False" Margin="974,289,111,286"/>
-            <metro:NumericUpDown Minimum = "0" Maximum = "10000" HorizontalAlignment="Left" VerticalAlignment="Top" Interval = "1" Width="100" Height="30"  HasDecimals="False" Margin="972,343,113,232"/>
+            <Controls:NumericUpDown x:Name="Gauze" Minimum = "0" Maximum = "10000" HorizontalAlignment="Left"  VerticalAlignment="Top" Interval = "1" Width="100" Height="30"  HasDecimals="False" Margin="974,289,111,286"/>
+            <metro:NumericUpDown x:Name="Towels" Minimum = "0" Maximum = "10000" HorizontalAlignment="Left" VerticalAlignment="Top" Interval = "1" Width="100" Height="30"  HasDecimals="False" Margin="972,343,113,232"/>
             <Label x:Name="label" Content="Gauze" HorizontalAlignment="Left" Margin="868,294,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy" Content="Towels" HorizontalAlignment="Left" Margin="868,346,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy1" Content="Screws" HorizontalAlignment="Left" Margin="868,398,0,0" VerticalAlignment="Top"/>
-            <metro:NumericUpDown Minimum = "0" HorizontalAlignment="Left" VerticalAlignment="Top" Maximum = "10000" Interval = "1" Width="100" Height="30"  HasDecimals="False" Margin="972,395,113,180"/>
+            <metro:NumericUpDown x:Name="Screws" Minimum = "0" HorizontalAlignment="Left" VerticalAlignment="Top" Maximum = "10000" Interval = "1" Width="100" Height="30"  HasDecimals="False" Margin="972,395,113,180"/>
         </Grid>
     </Grid>
 </Controls:MetroWindow>

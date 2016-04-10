@@ -13,7 +13,6 @@
         GlowBrush="{DynamicResource AccentColorBrush}"
         BorderThickness="1"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        Background="{DynamicResource MaterialDesignPaper}"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
@@ -30,10 +29,11 @@
             </Style>
         </ResourceDictionary>
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\bkgrnd.png" />
+    </Window.Background>
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Kait\Documents\bkgrnd.png"/>
-        </Grid.Background>
+        <materialDesign:Card Height="448" Background="White" materialDesign:ShadowAssist.ShadowDepth="Depth3" UniformCornerRadius="8"  Margin="138,86,138,0" />
         <Grid VerticalAlignment="Center" HorizontalAlignment="Center" >
 
             <Grid.RowDefinitions>
@@ -47,10 +47,10 @@
             <materialDesign:PackIcon Width="25" Margin="-63,6,0,0" Kind="AccountBox" RenderTransformOrigin="0.52,0.542" VerticalAlignment="Top" Height="25" />
             <TextBox x:Name="textBox"  Height="23" TextWrapping="Wrap" Margin="70,0,-52,17"/>
             <materialDesign:PackIcon Width="25" Height="25" Margin="-63,27,0,-39" Kind="Lock" RenderTransformOrigin="0.52,0.542" Grid.Row="2" />
-            <Button x:Name="button" Content="Submit"  Margin="70,80,148,-108" Grid.Row="2" Click="button_Click"/>
+            <Button x:Name="button" materialDesign:ShadowAssist.ShadowDepth="Depth2" Content="Submit"  Margin="108,98,90,-94" Grid.Row="2" Click="button_Click" Height="Auto"/>
             <Label x:Name="label" Content="User Id: "  Margin="-14,6,210,2" Grid.RowSpan="3" />
-            <Label x:Name="label_Copy" Content="Password:"  Margin="-14,27,210,-50" Grid.Row="2" HorizontalAlignment="Right" Width="104" />
-            <Label x:Name="label_Copy1" Content="Salvera"  Margin="70,-70,126,74" FontSize="22" />
+            <Label x:Name="label_Copy" Content="Password:"  Margin="-14,27,233,-50" Grid.Row="2" HorizontalAlignment="Right" Width="104" />
+            <Label x:Name="label_Copy1" Content="Salvera"  Margin="106,-74,90,0" FontSize="36" Height="48" VerticalAlignment="Top" />
 
 
 

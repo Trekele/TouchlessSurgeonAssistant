@@ -16,6 +16,6 @@
             <helix:DefaultLights/>
             <ModelVisual3D x:Name="p"/>
         </helix:HelixViewport3D>
-        <local:ctrlPatientInfo HorizontalAlignment="Left" Margin="10,10,0,494" Width="1167"/>
+        <local:ctrlPatientInfo x:Name="ctrlPatient" HorizontalAlignment="Left" Margin="10,10,0,494" Width="1167"/>
     </Grid>
 </Window>

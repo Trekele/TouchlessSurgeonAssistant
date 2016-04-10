@@ -94,9 +94,11 @@
       <DependentUpon>ctrlPatientInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomGesture.cs" />
+    <Compile Include="DoctorClass.cs" />
     <Compile Include="LeapGestureListener.cs" />
     <Compile Include="MouseMovement.cs" />
     <Compile Include="PatientClass.cs" />
+    <Compile Include="ProcedureClass.cs" />
     <Compile Include="SwipeDirection.cs" />
     <Compile Include="winChecklist.xaml.cs">
       <DependentUpon>winChecklist.xaml</DependentUpon>

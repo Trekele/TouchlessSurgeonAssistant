@@ -29,6 +29,7 @@ namespace TouchlessSurgeonAssistant
         Model3D device = null;
         private Controller controller;
         private LeapGestureListener listener;
+        private Point coords;
 
         public winOperation()
         {
@@ -38,10 +39,28 @@ namespace TouchlessSurgeonAssistant
             device3D.Content = Display3d(MODEL_PATH);
             viewPort3d.Children.Add(device3D);
             //initialize the leap controller and listener
+            coords = new Point();
             controller = new Controller();
             listener = new LeapGestureListener();
             controller.AddListener(listener);
             listener.LeapSwipe += SwipeAction;
+            listener.fingerLocation += Listener_fingerLocation; ;
+            listener.screenTap += Listener_screenTap;
+
+            ctrlPatient.timerStart();
+
+        }
+
+        private void Listener_screenTap()
+        {
+            MouseMovement.LeftMouseClick((int)coords.X, (int)coords.Y);
+        }
+
+        private void Listener_fingerLocation(Finger finger, Screen screen)
+        {
+            //change the mouse location based on the location of the finger.
+            coords = MouseMovement.GetPointFromFingers(finger, screen);
+            MouseMovement.SetCursorPos((int)coords.X, (int)coords.Y);
         }
 
         private Model3D Display3d(string model)

@@ -25,8 +25,9 @@ namespace TouchlessSurgeonAssistant
         private Controller controller;
         private LeapGestureListener listener;
         private Point coords;
+        private int docId;
 
-        public winDashboard()
+        public winDashboard(int doctorId = 0)
         {
             InitializeComponent();
 
@@ -36,6 +37,7 @@ namespace TouchlessSurgeonAssistant
             controller.AddListener(listener);
             listener.fingerLocation += Listener_fingerLocation;
             listener.screenTap += Listener_screenTap;
+            docId = doctorId;
         }
 
         private void Listener_screenTap()
@@ -56,10 +58,9 @@ namespace TouchlessSurgeonAssistant
             SqlCeConnection conn = null;
             SqlCeCommand cmd = null;
             SqlCeDataReader rdr = null;
-            SqlCeDataAdapter da = null;
 
             //create list of patients
-            List<PatientClass> list_patients = new List<PatientClass>();
+            DoctorClass doctor = null;
 
             try
             {
@@ -69,18 +70,26 @@ namespace TouchlessSurgeonAssistant
                 conn.Open();
 
                 //query to run on the database
-                string selectCmd = "SELECT * FROM PatientInfo";
+                string selectCmd = "SELECT * FROM DoctorInfo where id = " + docId;
                 cmd = conn.CreateCommand();
                 cmd.CommandText = selectCmd;
 
                 rdr = cmd.ExecuteReader();
 
+                if (rdr.Read())
+                {
+                    doctor = new DoctorClass(rdr);
+                }
+                cmd.CommandText = "select * from patientinfo pt join relationaltable rt on pt.id = rt.patient_id join procedureinfo pf on pt.procedure_id = pf.id where rt.doctor_id =" + doctor.ID;
+                rdr = cmd.ExecuteReader();
+
                 while (rdr.Read())
                 {
-                    list_patients.Add(new PatientClass(rdr));
+                    doctor.patientIDs.Add(new PatientClass(rdr));
                 }
-                patientDataGrid.DataContext = list_patients;
-                patientDataGrid.ItemsSource = list_patients;
+
+                patientDataGrid.DataContext = doctor.patientIDs;
+                patientDataGrid.ItemsSource = doctor.patientIDs;
             }
             catch
             {

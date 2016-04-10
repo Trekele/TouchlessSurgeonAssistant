@@ -23,7 +23,7 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <CheckBox x:Name="checkBox" Content="Ensure that patient name matches wristband" HorizontalAlignment="Left" Margin="0,18,0,0" VerticalAlignment="Top" Width="358" Checked="checkBox_Checked" FontSize="12">
+        <CheckBox x:Name="checkBox" Content="Ensure that patient name matches wristband" HorizontalAlignment="Left" Margin="0,18,0,0" VerticalAlignment="Top" Width="358" FontSize="12">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2" />
             </CheckBox.LayoutTransform>
@@ -33,13 +33,11 @@
                 <ScaleTransform ScaleX="2" ScaleY="2" />
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="checkBox_Copy1" Content="Acknowledge procedure area: " HorizontalAlignment="Left" Margin="0,156,0,0" VerticalAlignment="Top" Width="242" FontSize="12" Checked="checkBox_Copy1_Checked">
+        <CheckBox x:Name="checkBox_Copy1" Content="Acknowledge procedure area: " HorizontalAlignment="Left" Margin="0,156,0,0" VerticalAlignment="Top" Width="242" FontSize="12" >
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2" />
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <Label x:Name="procedureName" Content="Label" HorizontalAlignment="Left" Margin="397,90,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label x:Name="procedureArea" Content="Label" HorizontalAlignment="Left" Margin="397,160,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Button x:Name="button" Content="Submit" HorizontalAlignment="Left" Margin="295,235,0,0" VerticalAlignment="Top" Width="83" Click="button_Click"/>
         <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="383,235,0,0" VerticalAlignment="Top" Width="89" Click="button1_Click"/>
 

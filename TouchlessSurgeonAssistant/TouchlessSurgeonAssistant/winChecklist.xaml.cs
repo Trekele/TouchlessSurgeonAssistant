@@ -28,6 +28,7 @@ namespace TouchlessSurgeonAssistant
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            bool allChecked;
             checklistApproved = true;
             this.Close();
         }

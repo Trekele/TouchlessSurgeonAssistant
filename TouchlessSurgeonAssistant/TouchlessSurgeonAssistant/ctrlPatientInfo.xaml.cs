@@ -34,13 +34,6 @@ namespace TouchlessSurgeonAssistant
             timer = new DispatcherTimer();
             timer.Tick += dispatcherTimer_Tick;
             timer.Interval = new TimeSpan(0, 0, 1);
-
-            //disable the start button and enable the end button
-            btnEnd.IsEnabled = true;
-            btnStart.IsEnabled = false;
-
-            //start timing
-            timer.Start();
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
@@ -52,8 +45,18 @@ namespace TouchlessSurgeonAssistant
             {
                 winOperation opWindow = new winOperation();
                 opWindow.Show(); 
-                this.parentWindow.Close(); 
+                parentWindow.Close(); 
             }
+        }
+
+        public void timerStart()
+        {
+            //disable the start button and enable the end button
+            btnEnd.IsEnabled = true;
+            btnStart.IsEnabled = false;
+
+            //start timing
+            timer.Start();
         }
 
         private void btnEnd_Click(object sender, RoutedEventArgs e)

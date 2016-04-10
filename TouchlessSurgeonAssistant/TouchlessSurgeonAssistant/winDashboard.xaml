@@ -3,15 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Title="winDashboard" Height="300" Width="545.944" Loaded="MetroWindow_Loaded">
+        Title="winDashboard" Height="500" Width="1024" Loaded="MetroWindow_Loaded"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        BorderThickness="1"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <Grid>
-        <DataGrid x:Name="patientDataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="250" Width="519" 
+        <materialDesign:ColorZone Mode="PrimaryLight" Padding="16" >
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="ChevronDoubleDown" Height="24" Width="24" />
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="16 0 0 0"><Run Text="Select Patient Below"/></TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+
+        <DataGrid x:Name="patientDataGrid" HorizontalAlignment="Center" VerticalAlignment="Top" Height="250" Width="520" 
                   AutoGenerateColumns="False"
-                  ItemsSource="{Binding}" SelectionChanged="patientDataGrid_SelectionChanged">
+                  ItemsSource="{Binding}" SelectionChanged="patientDataGrid_SelectionChanged" Margin="247,115,247,0"
+                  materialDesign:ShadowAssist.ShadowDepth="Depth1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}"/>
                 <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}"/>

@@ -19,9 +19,23 @@ namespace TouchlessSurgeonAssistant
     /// </summary>
     public partial class winChecklist
     {
+        public bool checklistApproved { get; set; }
+
         public winChecklist()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            checklistApproved = true;
+            this.Close();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            checklistApproved = false;
+            this.Close();  
         }
     }
 }

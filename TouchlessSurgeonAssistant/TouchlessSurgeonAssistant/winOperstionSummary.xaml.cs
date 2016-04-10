@@ -19,9 +19,24 @@ namespace TouchlessSurgeonAssistant
     /// </summary>
     public partial class winOperstionSummary
     {
+        private PatientClass currentPatient;
+
         public winOperstionSummary(PatientClass patient)
         {
             InitializeComponent();
+            this.currentPatient = patient;
+        }
+
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            ctrlPatient.lblPatientName.Content = currentPatient.LastName + ", " + currentPatient.FirstName + " " + currentPatient.MiddleName;
+            ctrlPatient.lblSurgeryType.Content = currentPatient.ProcedureInfo;
+            lblDOB.Content = currentPatient.dob;
+            lblPatientID.Content = currentPatient.ID;
+            lblNotes.Content = currentPatient.Notes;
+            lblProcedureNotes.Content = currentPatient.ProcedureNotes;
+
+            ctrlPatient.parentWindow = this; 
         }
     }
 }

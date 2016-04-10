@@ -21,6 +21,8 @@ namespace TouchlessSurgeonAssistant
     /// </summary>
     public partial class ctrlPatientInfo : UserControl
     {
+        public Window parentWindow  { get; set; }
+
         private DispatcherTimer timer;
         private int totalSeconds;
         public ctrlPatientInfo()
@@ -32,17 +34,26 @@ namespace TouchlessSurgeonAssistant
             timer = new DispatcherTimer();
             timer.Tick += dispatcherTimer_Tick;
             timer.Interval = new TimeSpan(0, 0, 1);
+
+            //disable the start button and enable the end button
+            btnEnd.IsEnabled = true;
+            btnStart.IsEnabled = false;
+
+            //start timing
+            timer.Start();
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            //disable the start button and enable the end button
-            btnStart.IsEnabled = false;
-            btnEnd.IsEnabled = true;
-
-            //start timing
-            timer.Start();
-
+            winChecklist window = new winChecklist();
+            window.ShowDialog(); 
+            
+            if (window.checklistApproved == true)
+            {
+                winOperation opWindow = new winOperation();
+                opWindow.Show(); 
+                this.parentWindow.Close(); 
+            }
         }
 
         private void btnEnd_Click(object sender, RoutedEventArgs e)

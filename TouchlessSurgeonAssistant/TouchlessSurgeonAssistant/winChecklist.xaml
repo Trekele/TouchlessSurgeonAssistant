@@ -13,6 +13,15 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <CheckBox x:Name="checkBox" Content="Ensure that patient name matches wristband" HorizontalAlignment="Left" Margin="0,18,0,0" VerticalAlignment="Top" Width="358" Checked="checkBox_Checked" FontSize="12">
             <CheckBox.LayoutTransform>
@@ -31,6 +40,8 @@
         </CheckBox>
         <Label x:Name="procedureName" Content="Label" HorizontalAlignment="Left" Margin="397,90,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label x:Name="procedureArea" Content="Label" HorizontalAlignment="Left" Margin="397,160,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="button" Content="Submit" HorizontalAlignment="Left" Margin="295,235,0,0" VerticalAlignment="Top" Width="83" Click="button_Click"/>
+        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="383,235,0,0" VerticalAlignment="Top" Width="89" Click="button1_Click"/>
 
     </Grid>
 </Controls:MetroWindow>

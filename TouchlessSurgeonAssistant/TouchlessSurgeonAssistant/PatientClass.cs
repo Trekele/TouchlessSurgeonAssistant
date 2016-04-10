@@ -14,15 +14,10 @@ namespace TouchlessSurgeonAssistant
         public string MiddleName { get; set; }
         public string LastName { get; set; }
         public DateTime dob { get; set; }
-
-        public PatientClass(int id, string firstName, string middleName, string lastName, DateTime dob)
-        {
-            this.ID = id;
-            this.FirstName = firstName;
-            this.MiddleName = middleName;
-            this.LastName = lastName;
-            this.dob = dob;
-        }
+        public string ProcedureInfo { get; set; }
+        public string Notes { get; set; }
+        public string Area { get; set; }
+        public string ProcedureNotes { get; set; }
 
         public PatientClass(SqlCeDataReader rdr)
         {
@@ -31,6 +26,10 @@ namespace TouchlessSurgeonAssistant
             this.MiddleName = rdr.GetString(2);
             this.LastName = rdr.GetString(3);
             this.dob = rdr.GetDateTime(4);
+            this.ProcedureInfo = rdr.GetString(5);
+            this.Notes = rdr.GetString(6);
+            this.Area = rdr.GetString(7);
+            this.ProcedureNotes = rdr.GetString(8);
         }
     }
 }

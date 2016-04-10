@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
-        Title="winOperation" Height="637.567" Width="1186.516"  WindowState="Maximized"
+        Title="Operation" Height="637.567" Width="1186.516"  WindowState="Maximized"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         GlowBrush="{DynamicResource AccentColorBrush}"
         BorderThickness="1"
@@ -38,6 +38,7 @@
             <Label x:Name="label_Copy" Content="Towels" HorizontalAlignment="Left" Margin="868,346,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy1" Content="Screws" HorizontalAlignment="Left" Margin="868,398,0,0" VerticalAlignment="Top"/>
             <metro:NumericUpDown x:Name="Screws" Minimum = "0" HorizontalAlignment="Left" VerticalAlignment="Top" Maximum = "10000" Interval = "1" Width="100" Height="30"  HasDecimals="False" Margin="972,395,113,180"/>
+            <Label x:Name="label1" Content="Supplies" HorizontalAlignment="Left" Margin="868,229,0,0" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
 </Controls:MetroWindow>

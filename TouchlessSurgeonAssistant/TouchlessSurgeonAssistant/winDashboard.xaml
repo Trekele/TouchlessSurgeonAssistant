@@ -8,7 +8,7 @@
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Title="winDashboard" Height="500" Width="1024" Loaded="MetroWindow_Loaded"
+        Title="Dashboard" Height="500" Width="1024" Loaded="MetroWindow_Loaded"
         GlowBrush="{DynamicResource AccentColorBrush}"
         BorderThickness="1"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -24,13 +24,13 @@
             </StackPanel>
         </materialDesign:ColorZone>
 
-        <DataGrid x:Name="patientDataGrid" HorizontalAlignment="Center" VerticalAlignment="Top" Height="250" Width="520" 
+        <DataGrid x:Name="patientDataGrid" HorizontalAlignment="Center" VerticalAlignment="Top" Height="347" Width="896" 
                   AutoGenerateColumns="False"
-                  ItemsSource="{Binding}" SelectionChanged="patientDataGrid_SelectionChanged" Margin="247,115,247,0"
-                  materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                  ItemsSource="{Binding}" SelectionChanged="patientDataGrid_SelectionChanged" Margin="69,89,49,0"
+                  materialDesign:ShadowAssist.ShadowDepth="Depth1" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}"/>
-                <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}"/>
+                <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}" />
+                <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}" />
                 <DataGridTextColumn Header="Middle Name" Binding="{Binding Path=MiddleName}"/>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding Path=LastName}"/>
                 <DataGridTextColumn Header="Date of Birth" Binding="{Binding Path=dob}"/>

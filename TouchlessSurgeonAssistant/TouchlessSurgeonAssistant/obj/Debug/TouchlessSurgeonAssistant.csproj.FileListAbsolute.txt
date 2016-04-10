@@ -94,6 +94,6 @@ C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssista
 C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.csproj.GenerateResource.Cache
 C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.exe
 C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.pdb
-C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.csprojResolveAssemblyReference.cache
 C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\EndScreen.g.cs
 C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\EndScreen.baml
+C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.csprojResolveAssemblyReference.cache

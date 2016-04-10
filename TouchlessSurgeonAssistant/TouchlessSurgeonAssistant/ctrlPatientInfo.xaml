@@ -6,13 +6,13 @@
              xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
              mc:Ignorable="d" 
              d:DesignHeight="95.339" Width="600.344">
-    
+
     <Grid Margin="0,0,0,10">
-        <Label x:Name="lblPatientName" Content="PATIENT NAME" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.055,0.227"/>
-        <Label x:Name="lblSurgeryType" Content="TYPE OF SURGERY" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Right" Margin="0,16,95,0" VerticalAlignment="Top" Width="75" Click="btnStart_Click"/>
-        <Button x:Name="btnEnd" Content="END" Margin="0,16,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="btnEnd_Click"/>
-        <Label x:Name="lblTimer" Content="0:00:00" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,59,22,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.439,0.462"/>
+        <Label x:Name="lblPatientName" Content="PATIENT NAME" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.055,0.227" Height="38" Width="305" FontSize="20"/>
+        <Label x:Name="lblSurgeryType" Content="TYPE OF SURGERY" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="271"/>
+        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Right" Margin="0,7,138,0" VerticalAlignment="Top" Width="113" Click="btnStart_Click" Height="48"/>
+        <Button x:Name="btnEnd" Content="END" Margin="0,7,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="112" Click="btnEnd_Click" Height="48"/>
+        <Label x:Name="lblTimer" Content="0:00:00" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,55,54,-5" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.439,0.462" FontSize="18" Height="35"/>
 
 
     </Grid>

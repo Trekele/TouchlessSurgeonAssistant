@@ -25,7 +25,7 @@ namespace TouchlessSurgeonAssistant
         {
             InitializeComponent();
             this.patient = patient;
-            lblPatient.Content = string.Format(lblPatient.Content.ToString(), patient.FirstName + patient.LastName);
+            lblPatient.Content = string.Format(lblPatient.Content.ToString(), patient.FirstName +  " " + patient.LastName);
             lblDate.Content = string.Format(DateTime.Now.ToString("HH:mm:ss"));
             lblTimeEnlpased.Content = string.Format(lblTimeEnlpased.Content.ToString(), string.Format("{0}:0{1}:{2}", TimeEnlapsed / 86400, TimeEnlapsed / 60, TimeEnlapsed % 60));
             foreach (KeyValuePair<string, int> item in supplies)
@@ -34,6 +34,11 @@ namespace TouchlessSurgeonAssistant
             }
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close(); 
+   
 
+        }
     }
 }

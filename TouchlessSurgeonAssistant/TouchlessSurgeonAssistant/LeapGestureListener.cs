@@ -12,6 +12,8 @@ namespace TouchlessSurgeonAssistant
         public delegate void SwipeEvent(SwipeDirection sd);
         public delegate void FingerLocation(Finger finger, Screen screen);
         public delegate void ScreenTap();
+        public delegate void ZOOM(Zoom type);
+        public event ZOOM ZoomEvent;
         public event ScreenTap screenTap;
         public event FingerLocation fingerLocation;
         public event SwipeEvent LeapSwipe;
@@ -22,6 +24,7 @@ namespace TouchlessSurgeonAssistant
             controller.Config.SetFloat("Gesture.Swipe.MinVelocity", 100);
             controller.Config.Save();
             controller.EnableGesture(Gesture.GestureType.TYPESWIPE);
+            controller.EnableGesture(Gesture.GestureType.TYPECIRCLE);
         }
 
         public override void OnFrame(Controller controller)
@@ -76,9 +79,11 @@ namespace TouchlessSurgeonAssistant
                                 {
                                     //Clockwise if angle is less than 90 degrees
                                     clockwiseness = "clockwise";
+                                    ZoomEvent(Zoom.IN);
                                 }
                                 else
                                 {
+                                    ZoomEvent(Zoom.OUT);
                                     clockwiseness = "counterclockwise";
                                 }
 

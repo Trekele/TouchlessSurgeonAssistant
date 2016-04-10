@@ -46,9 +46,35 @@ namespace TouchlessSurgeonAssistant
             listener.LeapSwipe += SwipeAction;
             listener.fingerLocation += Listener_fingerLocation; ;
             listener.screenTap += Listener_screenTap;
+            listener.ZoomEvent += Listener_ZoomEvent;
 
             ctrlPatient.timerStart();
 
+        }
+
+        private void Listener_ZoomEvent(Zoom type)
+        {
+            Dispatcher.BeginInvoke(DispatcherPriority.Input, new ThreadStart(() =>
+            {
+                var matrix = device.Transform.Value;
+                double scaleFactor = 1;
+
+                switch (type)
+                {
+                    case Zoom.IN:
+                        scaleFactor = 1.001;
+                        break;
+                    case Zoom.OUT:
+                        scaleFactor = 1 / 1.001;
+                        break;
+                    default:
+                        break;
+                }
+
+                Vector3D v = new Vector3D(scaleFactor, scaleFactor, scaleFactor);
+                matrix.Scale(v);
+                device.Transform = new MatrixTransform3D(matrix);
+            }));
         }
 
         private void Listener_screenTap()
@@ -74,7 +100,7 @@ namespace TouchlessSurgeonAssistant
                 ModelImporter import = new ModelImporter();
 
                 //Load the 3D model file
-               // device = import.Load(model);
+                device = import.Load(model);
             }
             catch (Exception e)
             {

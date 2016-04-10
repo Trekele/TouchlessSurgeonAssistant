@@ -37,8 +37,12 @@ namespace TouchlessSurgeonAssistant
             controller.AddListener(listener);
             listener.fingerLocation += Listener_fingerLocation;
             listener.screenTap += Listener_screenTap;
+            listener.ZoomEvent += Listener_ZoomEvent;
             docId = doctorId;
         }
+
+        private void Listener_ZoomEvent(Zoom type)
+        { }
 
         private void Listener_screenTap()
         {

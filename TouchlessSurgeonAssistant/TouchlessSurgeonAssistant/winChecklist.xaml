@@ -6,16 +6,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
-        Title="winChecklist" Height="300" Width="300"
-        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-        GlowBrush="{DynamicResource AccentColorBrush}"
-        BorderThickness="1"
+        Title="winChecklist" Height="500" Width="1024"
+         BorderThickness="1"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <Grid>
-        
+        <CheckBox x:Name="checkBox" Content="Ensure that patient name matches wristband" HorizontalAlignment="Left" Margin="0,18,0,0" VerticalAlignment="Top" Width="358" Checked="checkBox_Checked" FontSize="12">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="checkBox_Copy" Content="Acknowledge procedure name: " HorizontalAlignment="Left" Margin="0,88,0,0" VerticalAlignment="Top" Width="252" FontSize="12">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="checkBox_Copy1" Content="Acknowledge procedure area: " HorizontalAlignment="Left" Margin="0,156,0,0" VerticalAlignment="Top" Width="242" FontSize="12" Checked="checkBox_Copy1_Checked">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <Label x:Name="procedureName" Content="Label" HorizontalAlignment="Left" Margin="397,90,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="procedureArea" Content="Label" HorizontalAlignment="Left" Margin="397,160,0,0" VerticalAlignment="Top" FontSize="18"/>
+
     </Grid>
 </Controls:MetroWindow>

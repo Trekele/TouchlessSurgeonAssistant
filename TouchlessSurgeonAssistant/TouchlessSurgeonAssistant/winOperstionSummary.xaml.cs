@@ -37,6 +37,7 @@ namespace TouchlessSurgeonAssistant
             lblProcedureNotes.Content = currentPatient.procedure.Notes;
 
             ctrlPatient.parentWindow = this; 
+            ctrlPatient.patient = currentPatient;
         }
     }
 }

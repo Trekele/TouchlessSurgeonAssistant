@@ -21,10 +21,12 @@ namespace TouchlessSurgeonAssistant
     /// </summary>
     public partial class ctrlPatientInfo : UserControl
     {
-        public Window parentWindow  { get; set; }
+        public Window parentWindow { get; set; }
 
         private DispatcherTimer timer;
         private int totalSeconds;
+        public PatientClass patient { get; set; }
+
         public ctrlPatientInfo()
         {
             InitializeComponent();
@@ -38,14 +40,14 @@ namespace TouchlessSurgeonAssistant
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            winChecklist window = new winChecklist();
-            window.ShowDialog(); 
-            
+            winChecklist window = new winChecklist(patient);
+            window.ShowDialog();
+
             if (window.checklistApproved == true)
             {
                 winOperation opWindow = new winOperation();
-                opWindow.Show(); 
-                parentWindow.Close(); 
+                opWindow.Show();
+                parentWindow.Close();
             }
         }
 

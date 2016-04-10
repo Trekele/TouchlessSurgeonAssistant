@@ -20,10 +20,42 @@ namespace TouchlessSurgeonAssistant
     public partial class winChecklist
     {
         public bool checklistApproved { get; set; }
+        private PatientClass patient;
+        private List<CheckBox> checkBoxes;
 
-        public winChecklist()
+        public winChecklist(PatientClass Patient)
         {
             InitializeComponent();
+            checkBoxes = new List<CheckBox>();
+            int topMargin = 20;
+            int count = 0;
+            patient = Patient;
+            var stackPanel = new StackPanel { Orientation = Orientation.Vertical };
+
+            foreach (string checklistItem in patient.procedure.CheckList)
+            {
+                CheckBox temp = new CheckBox();
+                temp.Content = checklistItem;
+                temp.HorizontalAlignment = HorizontalAlignment.Left;
+                temp.VerticalAlignment = VerticalAlignment.Top;
+                ScaleTransform scale = new ScaleTransform(2.0, 2.0);
+                //temp.RenderTransformOrigin = new Point(0.5, 0.5);
+                temp.RenderTransform = scale;
+                temp.LayoutTransform.Value.Scale(6, 6);
+                Thickness margin = temp.Margin;
+                margin.Left = 0;
+                margin.Top = topMargin;
+                margin.Right = 0;
+                temp.Margin = margin;
+
+                stackPanel.Children.Add(temp);
+                checkBoxes.Add(temp);
+                
+                topMargin += count == 2 ? 40 : 5;
+                count++;
+            }
+
+            this.Content = stackPanel;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -36,7 +68,7 @@ namespace TouchlessSurgeonAssistant
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             checklistApproved = false;
-            this.Close();  
+            this.Close();
         }
     }
 }

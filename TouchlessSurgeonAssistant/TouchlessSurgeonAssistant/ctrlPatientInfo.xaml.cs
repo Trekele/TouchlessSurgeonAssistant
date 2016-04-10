@@ -26,6 +26,7 @@ namespace TouchlessSurgeonAssistant
         private DispatcherTimer timer;
         private int totalSeconds;
         public PatientClass patient { get; set; }
+        private Dictionary<string, int> supplise { get; set; }
 
         public ctrlPatientInfo()
         {
@@ -45,7 +46,7 @@ namespace TouchlessSurgeonAssistant
 
             if (window.checklistApproved == true)
             {
-                winOperation opWindow = new winOperation();
+                winOperation opWindow = new winOperation(patient);
                 opWindow.Show();
                 parentWindow.Close();
             }
@@ -68,6 +69,9 @@ namespace TouchlessSurgeonAssistant
             btnEnd.IsEnabled = false;
 
             timer.Stop();
+            supplise = ((winOperation) parentWindow).getSupplies();
+            EndScreen es = new EndScreen(patient, totalSeconds, supplise);
+            es.Show(); 
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {

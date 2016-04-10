@@ -1,0 +1,18 @@
+﻿<Window x:Class="TouchlessSurgeonAssistant.EndScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
+        mc:Ignorable="d"
+        Title="EndScreen" Height="300" Width="343.22">
+    <Grid>
+        <Button x:Name="button" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75" Margin="110,233,107,0"/>
+        <Label x:Name="lblPatient" Content="Surgery has been completed for {0}" HorizontalAlignment="Left" Margin="59,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDate" Content="Date: {0}" HorizontalAlignment="Left" Margin="59,31,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTimeEnlpased" Content="Time Enlapsed: {0}" HorizontalAlignment="Left" Margin="59,57,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblConfirmation" Content="Please ensure that all supplies have been accounted for." HorizontalAlignment="Left" Margin="17,83,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSupplies" Content=""  HorizontalAlignment="Left" Margin="17,114,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

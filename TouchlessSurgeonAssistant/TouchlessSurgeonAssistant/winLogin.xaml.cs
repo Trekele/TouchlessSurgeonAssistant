@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlServerCe;
 
 namespace TouchlessSurgeonAssistant
 {
@@ -28,9 +29,41 @@ namespace TouchlessSurgeonAssistant
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            winDashboard window = new winDashboard();
-            window.Show();
-            this.Close(); 
+            //declare sqlce objects
+            SqlCeConnection conn = null;
+            SqlCeCommand cmd = null;
+            SqlCeDataReader rdr = null;
+
+            try
+            {
+                //path to the database
+                string connString = "Data Source = PatientData.sdf";
+                conn = new SqlCeConnection(connString);
+                conn.Open();
+
+                //query to run on the database
+                string selectCmd = "SELECT id from DoctorInfo WHERE username = '" + textBox.Text + "' AND password = '" + PasswordBox.Password + "'";
+                cmd = conn.CreateCommand();
+                cmd.CommandText = selectCmd;
+
+                rdr = cmd.ExecuteReader();
+
+                if (rdr.Read())
+                {
+                    winDashboard window = new winDashboard(rdr.GetInt32(0));
+                    window.Show();
+                    this.Close();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+             
         }
     }
 }

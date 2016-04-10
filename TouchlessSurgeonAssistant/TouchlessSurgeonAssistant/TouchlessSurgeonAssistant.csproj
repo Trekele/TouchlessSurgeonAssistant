@@ -95,6 +95,9 @@
     </Compile>
     <Compile Include="CustomGesture.cs" />
     <Compile Include="DoctorClass.cs" />
+    <Compile Include="EndScreen.xaml.cs">
+      <DependentUpon>EndScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LeapGestureListener.cs" />
     <Compile Include="MouseMovement.cs" />
     <Compile Include="PatientClass.cs" />
@@ -117,6 +120,10 @@
     </Compile>
     <Compile Include="Zoom.cs" />
     <Page Include="ctrlPatientInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EndScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

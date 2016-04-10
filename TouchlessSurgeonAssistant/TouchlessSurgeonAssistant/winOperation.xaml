@@ -21,7 +21,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <local:ctrlPatientInfo x:Name="ctrlPatient" HorizontalAlignment="Left" Margin="10,10,0,494" Width="1167"/>
+        <local:ctrlPatientInfo x:Name="ctrlPatient" HorizontalAlignment="Left" Margin="10,10,0,494" Width="1167" Loaded="ctrlPatient_Loaded"/>
         
         <Grid>
             <Grid.ColumnDefinitions>

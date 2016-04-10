@@ -25,16 +25,19 @@ namespace TouchlessSurgeonAssistant
     public partial class winOperation
     {
 
-        private const string MODEL_PATH = @"Heart.obj";
+        private string MODEL_PATH = @"Heart.obj";
         Model3D device = null;
         private Controller controller;
         private LeapGestureListener listener;
         private Point coords;
+        private PatientClass currentPatient; 
 
-        public winOperation()
+        public winOperation(PatientClass patient)
         {
-            InitializeComponent();
 
+            InitializeComponent();
+            this.currentPatient = patient;
+            MODEL_PATH = patient.OBJFile;
             ModelVisual3D device3D = new ModelVisual3D();
             device3D.Content = Display3d(MODEL_PATH);
             viewPort3d.Children.Add(device3D);
@@ -48,7 +51,13 @@ namespace TouchlessSurgeonAssistant
             listener.screenTap += Listener_screenTap;
             listener.ZoomEvent += Listener_ZoomEvent;
 
+            
+
             ctrlPatient.timerStart();
+
+            Gauze.Value = 0;
+            Towels.Value = 0;
+            Screws.Value = 0;
 
         }
 
@@ -149,6 +158,23 @@ namespace TouchlessSurgeonAssistant
                     Console.WriteLine(ex.Message);
                 }
             }));
+        }
+        public Dictionary<string, int> getSupplies()
+        {
+            Dictionary<string, int> returnSupplies = new Dictionary<string, int>();
+            returnSupplies.Add("Gauze", (int) Gauze.Value != null ? (int)Gauze.Value : 0);
+            returnSupplies.Add("Towels", (int) Towels.Value);
+            returnSupplies.Add("Screws", (int) Screws.Value);
+            return returnSupplies;
+        }
+
+        private void ctrlPatient_Loaded(object sender, RoutedEventArgs e)
+        {
+            ctrlPatient.parentWindow = this;
+            ctrlPatient.patient = currentPatient;
+
+            ctrlPatient.lblPatientName.Content = currentPatient.LastName + ", " + currentPatient.FirstName + " " + currentPatient.MiddleName;
+            ctrlPatient.lblSurgeryType.Content = currentPatient.procedure.Name;
         }
     }
 }

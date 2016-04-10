@@ -6,16 +6,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
-        Title="winDashboard" Height="300" Width="300"
-        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-        GlowBrush="{DynamicResource AccentColorBrush}"
-        BorderThickness="1"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        Background="{DynamicResource MaterialDesignPaper}"
-        TextElement.FontWeight="Medium"
-        TextElement.FontSize="14"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+        Title="winDashboard" Height="300" Width="545.944" Loaded="MetroWindow_Loaded">
     <Grid>
-        
+        <DataGrid x:Name="patientDataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="250" Width="519" 
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}"/>
+                <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}"/>
+                <DataGridTextColumn Header="Middle Name" Binding="{Binding Path=MiddleName}"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding Path=LastName}"/>
+                <DataGridTextColumn Header="Date of Birth" Binding="{Binding Path=dob}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Controls:MetroWindow>

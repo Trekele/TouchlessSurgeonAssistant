@@ -64,6 +64,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.2.4.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -94,6 +98,7 @@
     </Compile>
     <Compile Include="CustomGesture.cs" />
     <Compile Include="LeapGestureListener.cs" />
+    <Compile Include="PatientClass.cs" />
     <Compile Include="SwipeDirection.cs" />
     <Compile Include="winChecklist.xaml.cs">
       <DependentUpon>winChecklist.xaml</DependentUpon>

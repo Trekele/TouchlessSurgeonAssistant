@@ -80,8 +80,6 @@ C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssi
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\HelixToolkit.xml
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\HelixToolkit.Wpf.pdb
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\HelixToolkit.Wpf.xml
-C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\ctrl3DModelViewer.g.cs
-C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\ctrl3DModelViewer.baml
 C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\HelixToolkit.dll
 C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\HelixToolkit.Wpf.dll
 C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\HelixToolkit.pdb
@@ -97,4 +95,3 @@ C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssista
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\MaterialDesignColors.dll
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\MaterialDesignThemes.MahApps.dll
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\MaterialDesignThemes.Wpf.dll
-C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.csprojResolveAssemblyReference.cache

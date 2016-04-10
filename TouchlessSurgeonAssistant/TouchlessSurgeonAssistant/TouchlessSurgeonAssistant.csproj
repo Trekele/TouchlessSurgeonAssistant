@@ -90,9 +90,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ctrl3DModelViewer.xaml.cs">
-      <DependentUpon>ctrl3DModelViewer.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ctrlPatientInfo.xaml.cs">
       <DependentUpon>ctrlPatientInfo.xaml</DependentUpon>
     </Compile>
@@ -115,10 +112,6 @@
     <Compile Include="winOperstionSummary.xaml.cs">
       <DependentUpon>winOperstionSummary.xaml</DependentUpon>
     </Compile>
-    <Page Include="ctrl3DModelViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ctrlPatientInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

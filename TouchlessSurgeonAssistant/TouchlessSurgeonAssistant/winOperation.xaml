@@ -6,13 +6,16 @@
         xmlns:helix="http://helix-toolkit.org/wpf"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
-        Title="winOperation" Height="430.932" Width="530.085">
-    <Grid>
-        <helix:HelixViewport3D x:Name="viewPort3d" ZoomExtentsWhenLoaded="true" Margin="0,87,283,10" >
+        Title="winOperation" Height="637.567" Width="1186.516"  WindowState="Maximized">
+    <Grid Margin="0,0,-8,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <helix:HelixViewport3D x:Name="viewPort3d" ZoomExtentsWhenLoaded="true" Margin="0,118,681,215">
             <!-- Remember to add light to the scene -->
             <helix:DefaultLights/>
             <ModelVisual3D x:Name="p"/>
         </helix:HelixViewport3D>
-        <local:ctrlPatientInfo HorizontalAlignment="Left" Height="87" VerticalAlignment="Top" Width="529"/>
+        <local:ctrlPatientInfo HorizontalAlignment="Left" Margin="10,10,0,494" Width="1167"/>
     </Grid>
 </Window>

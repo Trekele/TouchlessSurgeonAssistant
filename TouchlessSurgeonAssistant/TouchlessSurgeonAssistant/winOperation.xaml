@@ -1,23 +1,18 @@
-﻿<Controls:MetroWindow x:Class="TouchlessSurgeonAssistant.winOperation"
+﻿<Window x:Class="TouchlessSurgeonAssistant.winOperation"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:helix="http://helix-toolkit.org/wpf"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
-        Title="winOperation" Height="492.584" Width="545.975"
-        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-        GlowBrush="{DynamicResource AccentColorBrush}"
-        BorderThickness="1"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        Background="{DynamicResource MaterialDesignPaper}"
-        TextElement.FontWeight="Medium"
-        TextElement.FontSize="14"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+        Title="winOperation" Height="430.932" Width="530.085">
     <Grid>
-       <local:ctrlPatientInfo HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="537" Margin="0,0,-245,0"/>
-       <local:ctrl3DModelViewer HorizontalAlignment="Left" Height="247" Margin="0,105,0,0" VerticalAlignment="Top" Width="220"/>
-
+        <helix:HelixViewport3D x:Name="viewPort3d" ZoomExtentsWhenLoaded="true" Margin="0,87,283,10" >
+            <!-- Remember to add light to the scene -->
+            <helix:DefaultLights/>
+            <ModelVisual3D x:Name="p"/>
+        </helix:HelixViewport3D>
+        <local:ctrlPatientInfo HorizontalAlignment="Left" Height="87" VerticalAlignment="Top" Width="529"/>
     </Grid>
-</Controls:MetroWindow>
+</Window>

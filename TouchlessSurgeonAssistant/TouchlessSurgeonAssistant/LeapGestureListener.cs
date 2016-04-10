@@ -10,6 +10,10 @@ namespace TouchlessSurgeonAssistant
     class LeapGestureListener : Listener
     {
         public delegate void SwipeEvent(SwipeDirection sd);
+        public delegate void FingerLocation(Finger finger, Screen screen);
+        public delegate void ScreenTap();
+        public event ScreenTap screenTap;
+        public event FingerLocation fingerLocation;
         public event SwipeEvent LeapSwipe;
 
         public override void OnConnect(Controller controller)
@@ -24,6 +28,30 @@ namespace TouchlessSurgeonAssistant
         {
             // Get the most recent frame and report some basic information
             Frame frame = controller.Frame();
+
+            //check for only if there is only one hand
+            if (frame.Hands.Count == 1)
+            {
+                //check to see if there is only the index finger is extended
+                FingerList fingers = frame.Hands[0].Fingers;
+                if (fingers[Finger.FingerType.TYPE_INDEX.GetHashCode()].IsExtended
+                 && !fingers[Finger.FingerType.TYPE_MIDDLE.GetHashCode()].IsExtended
+                 && !fingers[Finger.FingerType.TYPE_RING.GetHashCode()].IsExtended
+                 && !fingers[Finger.FingerType.TYPE_PINKY.GetHashCode()].IsExtended
+                 && !fingers[Finger.FingerType.TYPE_THUMB.GetHashCode()].IsExtended)
+                {
+                    fingerLocation(fingers[Finger.FingerType.TYPE_INDEX.GetHashCode()], controller.LocatedScreens.ClosestScreenHit(fingers[Finger.FingerType.TYPE_INDEX.GetHashCode()]));
+                }
+                if (fingers[Finger.FingerType.TYPE_INDEX.GetHashCode()].IsExtended
+                 && !fingers[Finger.FingerType.TYPE_MIDDLE.GetHashCode()].IsExtended
+                 && !fingers[Finger.FingerType.TYPE_RING.GetHashCode()].IsExtended
+                 && !fingers[Finger.FingerType.TYPE_PINKY.GetHashCode()].IsExtended
+                 && fingers[Finger.FingerType.TYPE_THUMB.GetHashCode()].IsExtended)
+                {
+                    screenTap();
+                }
+
+            }
 
             //check for custom gestures
             CustomGesture cg = new CustomGesture(frame);

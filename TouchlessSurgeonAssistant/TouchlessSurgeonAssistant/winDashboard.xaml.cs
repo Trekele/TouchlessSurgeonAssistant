@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlServerCe;
 using System.Data;
+using Leap;
 
 namespace TouchlessSurgeonAssistant
 {
@@ -21,9 +22,32 @@ namespace TouchlessSurgeonAssistant
     /// </summary>
     public partial class winDashboard
     {
+        private Controller controller;
+        private LeapGestureListener listener;
+        private Point coords;
+
         public winDashboard()
         {
             InitializeComponent();
+
+            coords = new Point();
+            controller = new Controller();
+            listener = new LeapGestureListener();
+            controller.AddListener(listener);
+            listener.fingerLocation += Listener_fingerLocation;
+            listener.screenTap += Listener_screenTap;
+        }
+
+        private void Listener_screenTap()
+        {
+            MouseMovement.LeftMouseClick((int)coords.X, (int)coords.Y);
+        }
+
+        private void Listener_fingerLocation(Finger finger, Screen screen)
+        {
+            //change the mouse location based on the location of the finger.
+            coords = MouseMovement.GetPointFromFingers(finger, screen);
+            MouseMovement.SetCursorPos((int)coords.X, (int)coords.Y);
         }
 
         private void MetroWindow_Loaded(object sender, RoutedEventArgs e)

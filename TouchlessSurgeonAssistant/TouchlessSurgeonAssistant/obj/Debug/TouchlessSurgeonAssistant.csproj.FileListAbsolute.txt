@@ -94,3 +94,4 @@ C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssi
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\MaterialDesignThemes.MahApps.dll
 C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\bin\Debug\MaterialDesignThemes.Wpf.dll
 C:\Users\Kait\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.csprojResolveAssemblyReference.cache
+C:\Users\Trekele\Documents\GitHub\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\TouchlessSurgeonAssistant\obj\Debug\TouchlessSurgeonAssistant.csprojResolveAssemblyReference.cache

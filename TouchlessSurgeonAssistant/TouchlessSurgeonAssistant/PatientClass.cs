@@ -7,7 +7,7 @@ using System.Data.SqlServerCe;
 
 namespace TouchlessSurgeonAssistant
 {
-    class PatientClass
+    public class PatientClass
     {
         public int ID { get; set; }
         public string FirstName { get; set; }

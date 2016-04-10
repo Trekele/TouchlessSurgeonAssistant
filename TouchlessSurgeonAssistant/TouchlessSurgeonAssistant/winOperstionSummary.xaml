@@ -14,7 +14,8 @@
         Background="{DynamicResource MaterialDesignPaper}"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"                 >
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"   
+        WindowState="Maximized">
     <Grid>
         <local:ctrlPatientInfo HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="537"/>
     </Grid>

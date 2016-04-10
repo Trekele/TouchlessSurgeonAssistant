@@ -66,5 +66,12 @@ namespace TouchlessSurgeonAssistant
                 conn.Close();
             }
         }
+
+        private void patientDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            winOperstionSummary window = new winOperstionSummary((PatientClass) patientDataGrid.SelectedItem);
+            window.Show();
+            this.Close(); 
+        }
     }
 }

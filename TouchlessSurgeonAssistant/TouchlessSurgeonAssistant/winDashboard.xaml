@@ -6,11 +6,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Title="winDashboard" Height="300" Width="545.944" Loaded="MetroWindow_Loaded">
     <Grid>
         <DataGrid x:Name="patientDataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="250" Width="519" 
                   AutoGenerateColumns="False"
-                  ItemsSource="{Binding}">
+                  ItemsSource="{Binding}" SelectionChanged="patientDataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}"/>
                 <DataGridTextColumn Header="First Name" Binding="{Binding Path=FirstName}"/>

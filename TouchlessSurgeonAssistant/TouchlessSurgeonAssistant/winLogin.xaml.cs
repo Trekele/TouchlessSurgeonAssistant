@@ -23,5 +23,12 @@ namespace TouchlessSurgeonAssistant
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            winDashboard window = new winDashboard();
+            window.Show();
+            this.Close(); 
+        }
     }
 }

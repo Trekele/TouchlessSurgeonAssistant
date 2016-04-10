@@ -7,6 +7,7 @@
         xmlns:local="clr-namespace:TouchlessSurgeonAssistant"
         mc:Ignorable="d"
         Title="Login" Height="720" Width="1080"
+        WindowState="Maximized"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         GlowBrush="{DynamicResource AccentColorBrush}"
         BorderThickness="1"
@@ -14,10 +15,29 @@
         Background="{DynamicResource MaterialDesignPaper}"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
 
-                      >
-    <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="382,186,0,0" VerticalAlignment="Top" Width="89"/>
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="textBox"  Height="23" TextWrapping="Wrap" Width="300" Margin="48,1,-48,16"/>
+        <TextBox x:Name="textBox_Copy"  Height="23" TextWrapping="Wrap" Width="300" Margin="48,34,-48,-41" Grid.Row="1"/>
+        <Button x:Name="button" Content="Submit"  Margin="70,92,148,-108" Grid.Row="1" Click="button_Click"/>
+        <Label x:Name="label" Content="User Id: "  Margin="-38,1,234,3" />
+        <Label x:Name="label_Copy" Content="Password:"  Margin="-38,40,234,-51" Grid.Row="1" />
+        <Label x:Name="label_Copy1" Content="Salvera"  Margin="70,-70,126,74" FontSize="22" />
+
+
     </Grid>
 </Controls:MetroWindow>

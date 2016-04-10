@@ -19,7 +19,7 @@ namespace TouchlessSurgeonAssistant
     /// </summary>
     public partial class winOperstionSummary
     {
-        public winOperstionSummary()
+        public winOperstionSummary(PatientClass patient)
         {
             InitializeComponent();
         }
